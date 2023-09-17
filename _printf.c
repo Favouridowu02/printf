@@ -33,6 +33,7 @@ int _printf(const char *format, ...)
 				{
 					_putchar(s[j]);
 					j++;
+					i++;
 				}
 				break;
 			case '%':
@@ -42,7 +43,6 @@ int _printf(const char *format, ...)
 				_putchar(format[i]);
 				break;
 			}
-			i += j;
 		}
 	}
 	_putchar('\n');
