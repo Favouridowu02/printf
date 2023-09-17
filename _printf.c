@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdarg.h>
-#include <stdio.h>
 
 /**
  * _printf - Write a function that produces output according to a format
