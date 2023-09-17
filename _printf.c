@@ -45,8 +45,8 @@ int _printf(const char *format, ...)
 				break;
 			}
 		}
-	}
 	i += j;
+	}
 	_putchar('\n');
 	va_end(ap);
 	return (i);
