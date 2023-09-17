@@ -15,3 +15,4 @@ o - octal
 x - unsigned hexadecimal (lowercase)
 X - unsigned hexadecimal (Uppercase)
 S - Strings of non-printable characters
+

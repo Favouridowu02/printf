@@ -33,8 +33,9 @@ int _printf(const char *format, ...)
 				{
 					_putchar(s[j]);
 					j++;
-					i++;
+					i;
 				}
+				i -= 1;
 				break;
 			case '%':
 				_putchar('%');
