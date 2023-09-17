@@ -44,8 +44,8 @@ int _printf(const char *format, ...)
 				_putchar(format[i]);
 				break;
 			}
+			i += j;
 		}
-	i += j;
 	}
 	_putchar('\n');
 	va_end(ap);
