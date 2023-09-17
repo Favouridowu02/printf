@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdarg.h>
-
+#include <stdio.h>
 /**
  * _printf - Write a function that produces output according to a format
  * @format: a character string. The format string is composed of zero or
@@ -15,7 +15,9 @@ int _printf(const char *format, ...)
 	char *s;
 
 	va_start(ap, format);
-	for (i = 0;format != NULL && format[i] != '\0'; i++)
+	if (format == NULL)
+		return (0);
+	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] == '%')
 		{
@@ -44,7 +46,6 @@ int _printf(const char *format, ...)
 			}
 		}
 	}
-	free(s);
 	i += j;
 	_putchar('\n');
 	va_end(ap);
