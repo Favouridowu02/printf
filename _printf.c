@@ -11,6 +11,7 @@ int _printf(const char *format, ...)
 {
 	va_list ap;
 	int i;
+	int j;
 
 	va_start(ap, format);
 	if (format == NULL)
@@ -20,11 +21,11 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			pswitch(ap, format, i);
+			j = pswitch(ap, format, i);
 		}
 		else
 			_putchar(format[i]);
 	}
 	va_end(ap);
-	return (i);
+	return (j);
 }

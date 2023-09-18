@@ -6,7 +6,7 @@
  * @format: the format array
  * @i: the length
  */
-void pswitch(va_list ap, const char *format, int i)
+int pswitch(va_list ap, const char *format, int i)
 {
 	int j = 0;
 	char *s;
@@ -24,10 +24,10 @@ void pswitch(va_list ap, const char *format, int i)
 				if (s)
 				{
 					while (s[j] != '\0')
-				{
-					_putchar(s[j]);
-					j++;
-				}
+					{
+						_putchar(s[j]);
+						j++;
+					}
 				}
 			}
 			else
@@ -45,4 +45,5 @@ void pswitch(va_list ap, const char *format, int i)
 			_putchar(format[i]);
 			break;
 	}
+	return (i);
 }
