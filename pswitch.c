@@ -21,11 +21,18 @@ void pswitch(va_list ap, const char *format, int i)
 			s = va_arg(ap, char *);
 			if (s != NULL)
 			{
-				while (s[j] != '\0')
+				if (s)
+				{
+					while (s[j] != '\0')
 				{
 					_putchar(s[j]);
 					j++;
 				}
+				}
+			}
+			else
+			{
+				_putchar('a');
 			}
 			i += j;
 			break;
