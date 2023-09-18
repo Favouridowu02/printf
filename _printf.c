@@ -11,22 +11,21 @@ int _printf(const char *format, ...)
 {
 	va_list ap;
 	int i;
-	int j;
+	int j = 0;
 
 	va_start(ap, format);
 	if (format == NULL)
 		return (-1);
-	for (i = 0; format[i] != '\0'; i++)
+	for (i = 0; format[i] != '\0'; i++, j++)
 	{
 		if (format[i] == '%')
 		{
 			i++;
-			j = pswitch(ap, format, i);
+			j += pswitch(ap, format, i);
 		}
 		else
 		{
 			_putchar(format[i]);
-			j++;
 		}
 	}
 	va_end(ap);
