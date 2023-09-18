@@ -20,18 +20,15 @@ int pswitch(va_list ap, const char *format, int i)
 			break;
 		case 's':
 			s = va_arg(ap, char *);
-			if (s != NULL)
+			if (s)
 			{
-				if (s)
+				while (s[k] != '\0')
 				{
-					while (s[k] != '\0')
-					{
-						_putchar(s[k]);
-						j++;
-						k++;
-					}
+					_putchar(s[k]);
+					k++;
 				}
 			}
+			j += k;
 			break;
 		case '%':
 			_putchar('%');
