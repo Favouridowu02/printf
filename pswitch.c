@@ -15,8 +15,7 @@ int pswitch(va_list ap, const char *format, int i)
 	switch (format[i])
 	{
 		case 'c':
-			if (va_arg(ap, int))
-				_putchar(va_arg(ap, int));
+			_putchar(va_arg(ap, int));
 			j += 1;
 			break;
 		case 's':
