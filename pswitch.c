@@ -1,5 +1,7 @@
 #include "main.h"
+#include <unistd.h>
 
+int _putstr(char *str);
 /**
  * pswitch - contains the switch statement
  * @ap: the va_list
@@ -9,7 +11,7 @@
  */
 int pswitch(va_list ap, const char *format, int i)
 {
-	int j = 0, k = 0;
+	int j = 0;
 	char *s;
 	char c;
 
@@ -17,23 +19,22 @@ int pswitch(va_list ap, const char *format, int i)
 	{
 		case 's':
 			s = va_arg(ap, char *);
-			if (s)
+			if (s != NULL)
 			{
-				while (s[k] != '\0')
+				if (s)
 				{
-					_putchar(s[k]);
-					k++;
+					j += _putstr(s);
 				}
 			}
-			j += k;
+			else
+			{
+				j += _putstr("(null)");
+			}
 			break;
 		case 'c':
 			c = va_arg(ap, int);
-			if (c)
-			{
-				_putchar(c);
-				j++;
-			}
+			_putchar(c);
+			j++;
 			break;
 		case '%':
 			_putchar('%');
@@ -47,3 +48,21 @@ int pswitch(va_list ap, const char *format, int i)
 	}
 	return (j);
 }
+/**
+ * _putstr - prints string
+ * @str: the string to be printed
+ *
+ * Return: the length of the string
+ */
+int _putstr(char *str)
+{
+	int i = 0;
+
+	while (str[i] != '\0')
+	{
+		write(1, &str[i], 1);
+		i++;
+	}
+	return (i);
+}
+
