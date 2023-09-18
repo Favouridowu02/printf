@@ -43,6 +43,7 @@ int pswitch(va_list ap, const char *format, int i)
 		default:
 			_putchar('%');
 			_putchar(format[i]);
+			j += 2;
 			break;
 	}
 	return (j);
