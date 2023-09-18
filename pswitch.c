@@ -9,7 +9,7 @@
  */
 int pswitch(va_list ap, const char *format, int i)
 {
-	int j = 0;
+	int j = 0, k = 0;
 	char *s;
 
 	switch (format[i])
@@ -24,10 +24,11 @@ int pswitch(va_list ap, const char *format, int i)
 			{
 				if (s)
 				{
-					while (s[j] != '\0')
+					while (s[k] != '\0')
 					{
-						_putchar(s[j]);
+						_putchar(s[k]);
 						j++;
+						k++;
 					}
 				}
 			}
