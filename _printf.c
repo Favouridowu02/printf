@@ -10,6 +10,7 @@
 int _printf(const char *format, ...)
 {
 	va_list ap;
+	int i;
 	int j;
 
 	va_start(ap, format);
