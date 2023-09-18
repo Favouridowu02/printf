@@ -3,6 +3,7 @@
 /**
  * _putchar - Prints a character
  * @c: the character to be passed
+ * Return: 0
  */
 int _putchar(char c)
 {

@@ -5,6 +5,7 @@
  * @ap: the va_list
  * @format: the format array
  * @i: the length
+ * Return: the length of the string
  */
 int pswitch(va_list ap, const char *format, int i)
 {
