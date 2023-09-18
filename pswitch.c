@@ -8,13 +8,14 @@
  */
 void pswitch(va_list ap, const char *format, int i)
 {
-	int j;
+	int j = 0;
 	char *s;
 
 	switch (format[i])
 	{
 		case 'c':
 			_putchar(va_arg(ap, int));
+			i += 1;
 			break;
 		case 's':
 			s = va_arg(ap, char *);
@@ -26,9 +27,11 @@ void pswitch(va_list ap, const char *format, int i)
 					j++;
 				}
 			}
+			i += j;
 			break;
 		case '%':
 			_putchar('%');
+			i += 1;
 			break;
 		default:
 			_putchar('%');
