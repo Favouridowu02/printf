@@ -12,12 +12,9 @@ int pswitch(va_list ap, const char *format, int i)
 	int j = 0, k = 0;
 	char *s;
 
+
 	switch (format[i])
 	{
-		case 'c':
-			_putchar(va_arg(ap, int));
-			j += 1;
-			break;
 		case 's':
 			s = va_arg(ap, char *);
 			if (s)
@@ -29,6 +26,9 @@ int pswitch(va_list ap, const char *format, int i)
 				}
 			}
 			j += k;
+			break;
+		case 'c':
+			_putchar(va_arg(ap, int));
 			break;
 		case '%':
 			_putchar('%');
