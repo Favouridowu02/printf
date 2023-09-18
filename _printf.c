@@ -31,10 +31,12 @@ int _printf(const char *format, ...)
 			case 's':
 				s = va_arg(ap, char *);
 
-				while (s[j] != '\0' && s != NULL)
-				{
-					_putchar(s[j]);
-					j++;
+				if (s != NULL)
+				{	while (s[j] != '\0')
+					{
+						_putchar(s[j]);
+						j++;
+					}
 				}
 				break;
 			case '%':
