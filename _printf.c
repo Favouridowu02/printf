@@ -24,7 +24,10 @@ int _printf(const char *format, ...)
 			j = pswitch(ap, format, i);
 		}
 		else
+		{
 			_putchar(format[i]);
+			j++;
+		}
 	}
 	va_end(ap);
 	return (j);
