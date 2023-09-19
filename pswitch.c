@@ -46,6 +46,7 @@ int pswitch(va_list ap, const char *format, int i)
 			j += 2;
 			break;
 	}
+	va_end(ap);
 	return (j);
 }
 /**
@@ -58,7 +59,7 @@ int _putstr(char *str)
 {
 	int i = 0;
 
-	while (str[i] != '\0')
+	while (str[i])
 	{
 		write(1, &str[i], 1);
 		i++;
