@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdarg.h>
 #include <stdio.h>
+int pswitch(va_list ap, const char *format, int i);
 /**
  * _printf - Write a function that produces output according to a format
  * @format: a character string. The format string is composed of zero or
