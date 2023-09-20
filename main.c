@@ -29,7 +29,7 @@ int main(void)
 	_printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
 	printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
 	_printf("Character:[]\n", 'H');
-	printf("Character:[]\n", 'H');
+	printf("Charaer:[]\n", 'H');
 	_printf("String:[%s\n");
 	printf("String:[%s\n");
 	_printf("Address:[%p]\n", addr);

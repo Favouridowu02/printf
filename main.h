@@ -5,6 +5,6 @@
 
 int _printf(const char *format, ...);
 int _putchar(char c);
-int  pswitch(va_list ap, const char *format, int i);
+int pswitch(va_list ap, const char *format, int i);
 
 #endif
