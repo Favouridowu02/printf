@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdarg.h>
 #include <stdio.h>
-int pswitch(va_list ap, const char *format, int i);
+
 /**
  * _printf - Write a function that produces output according to a format
  * @format: a character string. The format string is composed of zero or
@@ -11,7 +11,7 @@ int pswitch(va_list ap, const char *format, int i);
 int _printf(const char *format, ...)
 {
 	va_list ap;
-	int i = 0, j = 0;
+	int i = 0, j = 0, k = 0;
 
 	va_start(ap, format);
 	if (format == NULL)
@@ -21,7 +21,8 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			j += pswitch(ap, format, i);
+			k = pswitch(ap, format, i);
+			j += k;
 		}
 		else
 		{
