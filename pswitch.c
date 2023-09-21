@@ -30,11 +30,8 @@ int pswitch(va_list ap, const char *format, int i)
 			break;
 		case 'c':
 			c = va_arg(ap, int);
-			if (c)
-			{
-				_putchar(c);
-				j++;
-			}
+			_putchar(c);
+			j++;
 			break;
 		case '%':
 			_putchar('%');

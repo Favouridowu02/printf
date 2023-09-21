@@ -21,8 +21,13 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			k = pswitch(ap, format, i);
-			j += k;
+			if (format[i] == '\0')
+				return (-1);
+			if (format[i] != '\0')
+			{
+				k = pswitch(ap, format, i);
+				j += k;
+			}
 		}
 		else
 		{
