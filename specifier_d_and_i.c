@@ -18,7 +18,10 @@ int print_decimal(int num)
 	}
 	positive_num = num;
 	if (num == 0)
+	{
 		_putchar('0');
+		lenght++;
+	}
 	else if (positive_num <= 9)
 	{
 		_putchar(positive_num + '0');
